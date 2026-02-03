@@ -205,8 +205,6 @@ const posts = [
 
 let postContainer = document.getElementById("feedPosts");
 
-// console.log(postContainer)
-
 const postHtml = (post) => {
     return `<div class="feed-posts">
                     <div class="top-contant">
