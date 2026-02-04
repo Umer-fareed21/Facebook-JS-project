@@ -56,7 +56,7 @@ const signupHandler = () => {
   }
 
   // get previous users from local storage
-  let usersFromDB = JSON.parse(localStorage.getItem("users"));
+  let usersFromDB = JSON.parse(localStorage.getItem("users")) || [];
 
   // setting/register new user and save in the local storage
   usersFromDB.push(userObj);
