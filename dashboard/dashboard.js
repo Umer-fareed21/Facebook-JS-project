@@ -1,3 +1,35 @@
+const leftSideSeeMoreLessBtnDivs = document.getElementById("leftSideSeeMoreLessDivs")
+const seeLess = document.getElementById("seeLess")
+
+function leftSideSeeMoreLessBtn() {
+    if (leftSideSeeMoreLessBtnDivs.style.display === "none") {
+        leftSideSeeMoreLessBtnDivs.style.display = "block"
+
+        seeLess.innerHTML =
+
+            `
+            <div id="user-profile" class="user-profile">
+                <i class="fa-solid fa-angle-up"></i>
+            </div>
+            See less
+        `
+    } else {
+        leftSideSeeMoreLessBtnDivs.style.display = "none"
+
+        seeLess.innerHTML = `
+            <div id="user-profile" class="user-profile">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            See more
+        `
+    }
+}
+
+
+
+
+
+
 const stories = [
     {
         fullName: "Emma Johnson",

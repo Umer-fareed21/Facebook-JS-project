@@ -146,7 +146,8 @@
     overflow-y: auto;
 }
 
-.main .left-sidebar .left-sidebar-first-col>div {
+.main .left-sidebar .left-sidebar-first-col>div,
+#l-s-l-d-none {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -162,6 +163,10 @@
     background-color: #d6d6d66f;
 }
 
+.left-sidebar-second-col {
+    margin-top: 50px;
+}
+
 .left-sidebar-second-col a {
     font-family: "Arial";
     font-size: 13px;
@@ -171,6 +176,10 @@
 
 .left-sidebar-second-col a:hover {
     text-decoration: underline;
+}
+
+#leftSideSeeMoreLessDivs {
+    display: none;
 }
 
 .user-profile {
