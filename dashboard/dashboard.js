@@ -262,7 +262,7 @@ const posts = [
 let postContainer = document.getElementById("feedPosts");
 
 const postHtml = (post) => {
-    return `<div class="feed-posts">
+    return `<div id="feed-posts" class="feed-posts">
                     <div class="top-contant">
                         <div class="t-c-1">
                             <div class="t-c-1-left">

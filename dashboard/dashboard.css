@@ -69,7 +69,8 @@
 }
 
 .header-center>div {
-    width: 100px;
+    max-width: 100px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,6 +78,10 @@
     height: 100%;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.header-center>div svg {
+    color: #5C5E62;
 }
 
 .header-center>div:hover {
@@ -357,6 +362,7 @@
     border-radius: 30px;
     background-color: #eeeeee;
     font-size: 17px;
+    cursor: pointer;
 }
 
 .profile-nav>button:hover {
@@ -562,6 +568,11 @@
     justify-content: center;
 }
 
+.feed-posts .feed-img img {
+    max-width: 600px;
+    width: 100%;
+}
+
 .bottom-contant {
     display: flex;
     flex-direction: column;
@@ -606,4 +617,87 @@
 
 .x1b0d499.x1d69dk1 {
     filter: invert(43%) sepia(5%) saturate(347%) hue-rotate(182deg) brightness(91%) contrast(87%);
+}
+
+@media (max-width: 768px) {
+
+    .header-left .search-input>input,
+    .header-right>button,
+    .main .left-sidebar,
+    .right-slider {
+        display: none;
+    }
+
+    .main {
+        justify-content: center;
+    }
+
+    .center-bar {
+        width: 80%;
+    }
+    
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-center {
+        gap: 20px;
+    }
+
+    .header-right {
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .header-left .search-input {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-center {
+        display: none;
+    }
+
+    .center-bar {
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .logo-imgs {
+        gap: 5px;
+    }
+
+    .profile-nav>button {
+        font-size: 14px;
+    }
+
+    .feed-posts  {
+        border-radius: 0px;
+        box-shadow: none;
+        padding: 20px 0px;
+        margin-top: 0px;
+    }
+
+    #feed-posts {
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .profile-nav {
+        border-radius: 0px;
+    }
+
+    .story-container {
+        margin-left: 10px;
+    }
 }
