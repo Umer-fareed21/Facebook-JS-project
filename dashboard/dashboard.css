@@ -349,7 +349,7 @@
     margin-right: 10px;
 }
 
-.profile-nav>input {
+.profile-nav>button {
     width: 60%;
     border: none;
     background-color: transparent;
@@ -359,8 +359,8 @@
     font-size: 17px;
 }
 
-.profile-nav>input:focus {
-    outline: none;
+.profile-nav>button:hover {
+    background-color: #d6d6d66f;
 }
 
 .logo-imgs {

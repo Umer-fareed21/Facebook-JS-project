@@ -2,27 +2,51 @@ const leftSideSeeMoreLessBtnDivs = document.getElementById("leftSideSeeMoreLessD
 const seeLess = document.getElementById("seeLess")
 
 function leftSideSeeMoreLessBtn() {
-    if (leftSideSeeMoreLessBtnDivs.style.display === "none") {
-        leftSideSeeMoreLessBtnDivs.style.display = "block"
+    // if (leftSideSeeMoreLessBtnDivs.style.display === "none") {
+    //     leftSideSeeMoreLessBtnDivs.style.display = "block"
 
-        seeLess.innerHTML =
+    //     seeLess.innerHTML =
 
-            `
-            <div id="user-profile" class="user-profile">
+    //         `
+    //         <div id="user-profile" class="user-profile">
+    //             <i class="fa-solid fa-angle-up"></i>
+    //         </div>
+    //         See less
+    //     `
+    // } else {
+    //     leftSideSeeMoreLessBtnDivs.style.display = "none"
+
+    //     seeLess.innerHTML = `
+    //         <div id="user-profile" class="user-profile">
+    //             <i class="fa-solid fa-angle-down"></i>
+    //         </div>
+    //         See more
+    //     `
+    // }
+
+
+
+    const isHidden = window.getComputedStyle(leftSideSeeMoreLessDivs).display === "none";
+
+    if (isHidden) {
+        leftSideSeeMoreLessDivs.style.display = "block";
+        seeLess.innerHTML = `
+            <div class="user-profile">
                 <i class="fa-solid fa-angle-up"></i>
             </div>
             See less
-        `
+        `;
     } else {
-        leftSideSeeMoreLessBtnDivs.style.display = "none"
-
+        leftSideSeeMoreLessDivs.style.display = "none";
         seeLess.innerHTML = `
-            <div id="user-profile" class="user-profile">
+            <div class="user-profile">
                 <i class="fa-solid fa-angle-down"></i>
             </div>
             See more
-        `
+        `;
+
     }
+
 }
 
 
