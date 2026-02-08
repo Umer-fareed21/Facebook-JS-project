@@ -418,14 +418,25 @@ createPostHTMLThroughMap();
 
 
 
-
 const dropDownMenu = document.getElementById("dropdown-menu");
 dropDownMenu.style.display = "none";
 
 function menuDropDown() {
     if (dropDownMenu.style.display === "none") {
         dropDownMenu.style.display = "block";
-    }else {
+    } else {
         dropDownMenu.style.display = "none";
+    }
+}
+
+
+
+const dropDownMessanger = document.getElementById("dropdown-messanger");
+dropDownMessanger.style.display = "none";
+function messangerDropDown() {
+    if (dropDownMessanger.style.display === "none") {
+        dropDownMessanger.style.display = "block";
+    } else {
+        dropDownMessanger.style.display = "none";
     }
 }

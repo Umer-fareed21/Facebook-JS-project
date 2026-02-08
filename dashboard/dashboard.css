@@ -120,7 +120,7 @@
     align-items: center;
 }
 
-.header-right .header-right-icons>div {
+.header-right .header-right-icons>.logo-svg {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,7 +255,7 @@
 }
 
 .dropdown-menu-contant-left>.menu-options>div:hover,
-.dropdown-menu-contant-right>.menu-options>div:hover  {
+.dropdown-menu-contant-right>.menu-options>div:hover {
     background-color: #d6d6d66f;
     border-radius: 10px;
 }
@@ -312,10 +312,151 @@
     align-self: center;
 }
 
-
-
 /*********************************************  Dropdown menu end ***********************************************/
 
+
+
+/*********************************************  Dropdown Messanger start ***********************************************/
+
+.dropdown-messanger {
+    font-family: "Arial";
+    max-width: 350px;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    align-self: baseline;
+    margin-top: 50px;
+    margin-right: 100px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 15px 15px;
+    z-index: 999;
+    border-radius: 10px;
+    overflow: auto;
+    cursor: auto;
+}
+
+.dropdown-messanger>.dropdown-messanger-container {
+    width: 100%;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-header>.heading>h1 {
+    font-size: 24px;
+    color: #080809;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-header>.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-header>.icons>.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-header>.icons>.icon:hover {
+    background-color: #d6d6d66f;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-searchbar {
+    margin-bottom: 20px;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-searchbar>.searchbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #eeeeee;
+    padding-left: 8px;
+    border-radius: 25px;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-searchbar>.searchbar>div>i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.dropdown-messanger-container>.dropdown-messanger-container-searchbar>.searchbar>input {
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+}
+
+.dropdown-messanger-container-fillter-buttons>button:first-child {
+    color: #075CE5;
+    background-color: #d6d6d66f;
+}
+
+.dropdown-messanger-container-fillter-buttons>button{
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 6px;
+    border-radius: 20px;
+}
+
+.dropdown-messanger-container-fillter-buttons>button:hover {
+    background-color: #d6d6d66f;
+}
+
+.dropdown-messanger-container-fillter-chats>.chat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dropdown-messanger-container-fillter-chats>.chat>.chat-img>img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.dropdown-messanger-container-fillter-chats>.chat {
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+.dropdown-messanger-container-fillter-chats>.chat>.chat-contant>h3 {
+    font-size: 15px;
+    color: #080809;
+} 
+
+.dropdown-messanger-container-fillter-chats>.chat>.chat-contant>p {
+    font-size: 13px;
+    color: #65686c;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************  Dropdown Messanger stop ***********************************************/
 
 .main {
     display: flex;
