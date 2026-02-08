@@ -1,59 +1,58 @@
+// left bar see more or see less start
 const leftSideSeeMoreLessBtnDivs = document.getElementById("leftSideSeeMoreLessDivs")
 const seeLess = document.getElementById("seeLess")
 
 function leftSideSeeMoreLessBtn() {
-    // if (leftSideSeeMoreLessBtnDivs.style.display === "none") {
-    //     leftSideSeeMoreLessBtnDivs.style.display = "block"
+    if (leftSideSeeMoreLessBtnDivs.style.display === "none") {
+        leftSideSeeMoreLessBtnDivs.style.display = "block"
 
-    //     seeLess.innerHTML =
+        seeLess.innerHTML =
 
-    //         `
-    //         <div id="user-profile" class="user-profile">
-    //             <i class="fa-solid fa-angle-up"></i>
-    //         </div>
-    //         See less
-    //     `
-    // } else {
-    //     leftSideSeeMoreLessBtnDivs.style.display = "none"
-
-    //     seeLess.innerHTML = `
-    //         <div id="user-profile" class="user-profile">
-    //             <i class="fa-solid fa-angle-down"></i>
-    //         </div>
-    //         See more
-    //     `
-    // }
-
-
-
-    const isHidden = window.getComputedStyle(leftSideSeeMoreLessDivs).display === "none";
-
-    if (isHidden) {
-        leftSideSeeMoreLessDivs.style.display = "block";
-        seeLess.innerHTML = `
-            <div class="user-profile">
+            `
+            <div id="user-profile" class="user-profile">
                 <i class="fa-solid fa-angle-up"></i>
             </div>
             See less
-        `;
+        `
     } else {
-        leftSideSeeMoreLessDivs.style.display = "none";
+        leftSideSeeMoreLessBtnDivs.style.display = "none"
+
         seeLess.innerHTML = `
-            <div class="user-profile">
+            <div id="user-profile" class="user-profile">
                 <i class="fa-solid fa-angle-down"></i>
             </div>
             See more
-        `;
-
+        `
     }
 
+
+
+    // const isHidden = window.getComputedStyle(leftSideSeeMoreLessDivs).display === "none";
+
+    // if (isHidden) {
+    //     leftSideSeeMoreLessDivs.style.display = "block";
+    //     seeLess.innerHTML = `
+    //         <div class="user-profile">
+    //             <i class="fa-solid fa-angle-up"></i>
+    //         </div>
+    //         See less
+    //     `;
+    // } else {
+    //     leftSideSeeMoreLessDivs.style.display = "none";
+    //     seeLess.innerHTML = `
+    //         <div class="user-profile">
+    //             <i class="fa-solid fa-angle-down"></i>
+    //         </div>
+    //         See more
+    //     `;
+
+    // }
+
 }
+// left bar see more or see less end
 
 
-
-
-
-
+// stories functionality start
 const stories = [
     {
         fullName: "Emma Johnson",
@@ -155,7 +154,10 @@ const createStoryHTML = () => {
 };
 
 createStoryHTML();
+// stories functionality stop
 
+
+// posts functionality start
 const posts = [
     {
         profileLogo: "https://i.pravatar.cc/150?img=1",
@@ -408,4 +410,22 @@ const createPostHTMLThroughMap = () => {
     postContainer.innerHTML = posts.map(post => postHtml(post)).join("");
 }
 
-createPostHTMLThroughMap(); 
+createPostHTMLThroughMap();
+// posts functionality stop
+
+
+
+
+
+
+
+const dropDownMenu = document.getElementById("dropdown-menu");
+dropDownMenu.style.display = "none";
+
+function menuDropDown() {
+    if (dropDownMenu.style.display === "none") {
+        dropDownMenu.style.display = "block";
+    }else {
+        dropDownMenu.style.display = "none";
+    }
+}
