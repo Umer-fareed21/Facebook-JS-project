@@ -402,6 +402,12 @@ dropDownMenu.style.display = "none";
 
 function menuDropDown() {
     if (dropDownMenu.style.display === "none") {
+        if (dropDownMessanger.style.display === "block") {
+            dropDownMessanger.style.display = "none";
+            dropDownMessangerIconsDiv.style.backgroundColor = ""
+            dropDownMessangerIconsDivSvg.style.fill = "";
+        }
+
         dropDownMenu.style.display = "block";
         dropDownMenuIconsDiv.style.backgroundColor = "#ebf5ff"
         dropDownMenuIconsDivSvg.style.fill = "#1877f2";
@@ -420,6 +426,11 @@ dropDownMessanger.style.display = "none";
 
 function messangerDropDown() {
     if (dropDownMessanger.style.display === "none") {
+        if (dropDownMenu.style.display === "block") {
+            dropDownMenu.style.display = "none";
+            dropDownMenuIconsDiv.style.backgroundColor = ""
+            dropDownMenuIconsDivSvg.style.fill = "";
+        }
         dropDownMessanger.style.display = "block";
 
         dropDownMessangerIconsDiv.style.backgroundColor = "#ebf5ff"
