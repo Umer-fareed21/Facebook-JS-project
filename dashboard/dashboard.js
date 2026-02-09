@@ -1,5 +1,6 @@
 // left bar see more or see less start
 const leftSideSeeMoreLessBtnDivs = document.getElementById("leftSideSeeMoreLessDivs")
+leftSideSeeMoreLessBtnDivs.style.display = "none";
 const seeLess = document.getElementById("seeLess")
 
 function leftSideSeeMoreLessBtn() {
@@ -24,30 +25,6 @@ function leftSideSeeMoreLessBtn() {
             See more
         `
     }
-
-
-
-    // const isHidden = window.getComputedStyle(leftSideSeeMoreLessDivs).display === "none";
-
-    // if (isHidden) {
-    //     leftSideSeeMoreLessDivs.style.display = "block";
-    //     seeLess.innerHTML = `
-    //         <div class="user-profile">
-    //             <i class="fa-solid fa-angle-up"></i>
-    //         </div>
-    //         See less
-    //     `;
-    // } else {
-    //     leftSideSeeMoreLessDivs.style.display = "none";
-    //     seeLess.innerHTML = `
-    //         <div class="user-profile">
-    //             <i class="fa-solid fa-angle-down"></i>
-    //         </div>
-    //         See more
-    //     `;
-
-    // }
-
 }
 // left bar see more or see less end
 
@@ -416,27 +393,42 @@ createPostHTMLThroughMap();
 
 
 
-
-
+// Dropdown Functinallity start
+const dropDownMenuIconsDiv = document.getElementById("drop-down-menu-div");
+const dropDownMenuIconsDivSvg = document.getElementById("drop-down-menu-div-icon");
+// console.log(dropDownIconsDivSvg)
 const dropDownMenu = document.getElementById("dropdown-menu");
 dropDownMenu.style.display = "none";
 
 function menuDropDown() {
     if (dropDownMenu.style.display === "none") {
         dropDownMenu.style.display = "block";
+        dropDownMenuIconsDiv.style.backgroundColor = "#ebf5ff"
+        dropDownMenuIconsDivSvg.style.fill = "#1877f2";
     } else {
         dropDownMenu.style.display = "none";
+        dropDownMenuIconsDiv.style.backgroundColor = ""
+        dropDownMenuIconsDivSvg.style.fill = "";
     }
-}
+};
 
-
+const dropDownMessangerIconsDiv = document.getElementById("drop-down-messanger-div");
+const dropDownMessangerIconsDivSvg = document.getElementById("drop-down-messanger-div-icon");
 
 const dropDownMessanger = document.getElementById("dropdown-messanger");
 dropDownMessanger.style.display = "none";
+
 function messangerDropDown() {
     if (dropDownMessanger.style.display === "none") {
         dropDownMessanger.style.display = "block";
+
+        dropDownMessangerIconsDiv.style.backgroundColor = "#ebf5ff"
+        dropDownMessangerIconsDivSvg.style.fill = "#1877f2";
     } else {
         dropDownMessanger.style.display = "none";
+
+        dropDownMessangerIconsDiv.style.backgroundColor = ""
+        dropDownMessangerIconsDivSvg.style.fill = "";
     }
-}
+};
+// Dropdown Functinallity stop
