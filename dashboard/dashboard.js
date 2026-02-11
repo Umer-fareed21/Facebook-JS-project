@@ -400,86 +400,86 @@ createPostHTMLThroughMap();
 
 
 // Drop down menu left side items loop start
-const dropDownMenuItems = [
-    {
-        logo: `<i data-visualcompletion="css-img"
-                style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
-                background-position:0 -629px;
-                background-size:auto;
-                width:36px;
-                height:36px;
-                background-repeat:no-repeat;
-                display:inline-block"></i>`,
-        tittle: "Events",
-        info: "Organize or find events and other things to do online and nearby."
-    },
-    {
-        logo: `<i data-visualcompletion="css-img"
-                style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
-                background-position:0 -777px;
-                background-size:auto;
-                width:36px;
-                height:36px;
-                background-repeat:no-repeat;
-                display:inline-block"></i>`,
-        tittle: "Friends",
-        info: "Search for friends or people you may know."
-    },
-    {
-        logo: `<i data-visualcompletion="css-img"
-                style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
-                background-position:0 -185px;
-                background-size:auto;
-                width:36px;
-                height:36px;
-                background-repeat:no-repeat;
-                display:inline-block"></i>`,
-        tittle: "Groups",
-        info: "Connect with people who share your interests."
-    },
-    {
-        logo: `<img src="../assets/news-feeds.png" alt="News Feed" />`,
-        tittle: "News Feed",
-        info: "See relevant posts from people and Pages you follow."
-    },
-    {
-        logo: `<img src="../assets/i-logo-1.png" alt="Feeds" />`,
-        tittle: "Feeds",
-        info: "See the most recent posts from your friends, groups, Pages and more."
-    },
-    {
-        logo: `<i data-visualcompletion="css-img"
-                style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/yq/r/6aum_pQMnLN.webp?_nc_eui2=AeE3KrRUmgft9wK_frK6s2AA8ctQYTbLk1Pxy1BhNsuTU34fMSb_fqCIhFYxkjNvwNLWee9D3Zp5vqzi6rRTanWT');
-                background-position:0 -333px;
-                background-size:auto;
-                width:36px;
-                height:36px;
-                background-repeat:no-repeat;
-                display:inline-block"></i>`,
-        tittle: "Pages",
-        info: "Discover and connect with businesses on Facebook."
-    }
-];
+// const dropDownMenuItems = [
+//     {
+//         logo: `<i data-visualcompletion="css-img"
+//                 style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
+//                 background-position:0 -629px;
+//                 background-size:auto;
+//                 width:36px;
+//                 height:36px;
+//                 background-repeat:no-repeat;
+//                 display:inline-block"></i>`,
+//         tittle: "Events",
+//         info: "Organize or find events and other things to do online and nearby."
+//     },
+//     {
+//         logo: `<i data-visualcompletion="css-img"
+//                 style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
+//                 background-position:0 -777px;
+//                 background-size:auto;
+//                 width:36px;
+//                 height:36px;
+//                 background-repeat:no-repeat;
+//                 display:inline-block"></i>`,
+//         tittle: "Friends",
+//         info: "Search for friends or people you may know."
+//     },
+//     {
+//         logo: `<i data-visualcompletion="css-img"
+//                 style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
+//                 background-position:0 -185px;
+//                 background-size:auto;
+//                 width:36px;
+//                 height:36px;
+//                 background-repeat:no-repeat;
+//                 display:inline-block"></i>`,
+//         tittle: "Groups",
+//         info: "Connect with people who share your interests."
+//     },
+//     {
+//         logo: `<img src="../assets/news-feeds.png" alt="News Feed" />`,
+//         tittle: "News Feed",
+//         info: "See relevant posts from people and Pages you follow."
+//     },
+//     {
+//         logo: `<img src="../assets/i-logo-1.png" alt="Feeds" />`,
+//         tittle: "Feeds",
+//         info: "See the most recent posts from your friends, groups, Pages and more."
+//     },
+//     {
+//         logo: `<i data-visualcompletion="css-img"
+//                 style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/yq/r/6aum_pQMnLN.webp?_nc_eui2=AeE3KrRUmgft9wK_frK6s2AA8ctQYTbLk1Pxy1BhNsuTU34fMSb_fqCIhFYxkjNvwNLWee9D3Zp5vqzi6rRTanWT');
+//                 background-position:0 -333px;
+//                 background-size:auto;
+//                 width:36px;
+//                 height:36px;
+//                 background-repeat:no-repeat;
+//                 display:inline-block"></i>`,
+//         tittle: "Pages",
+//         info: "Discover and connect with businesses on Facebook."
+//     }
+// ];
 
-const dropDownMenuOptions = document.getElementById("dropDownMenu");
+// const dropDownMenuOptions = document.getElementById("dropDownMenu");
 
-function dropDownMenuOptionsMultiplyer() {
-    for (let i = 0; i < dropDownMenuItems.length; i++) {
-        let dropDownMenuOptionsHtml = `
-        <div class="menu-item">
-            ${dropDownMenuItems[i].logo}
-            <div>
-                <h4>${dropDownMenuItems[i].tittle}</h4>
-                <p>${dropDownMenuItems[i].info}</p>
-            </div>
-        </div>
-        `;
+// function dropDownMenuOptionsMultiplyer() {
+//     for (let i = 0; i < dropDownMenuItems.length; i++) {
+//         let dropDownMenuOptionsHtml = `
+//         <div class="menu-item">
+//             ${dropDownMenuItems[i].logo}
+//             <div>
+//                 <h4>${dropDownMenuItems[i].tittle}</h4>
+//                 <p>${dropDownMenuItems[i].info}</p>
+//             </div>
+//         </div>
+//         `;
 
-        dropDownMenuOptions.innerHTML += dropDownMenuOptionsHtml;
-    }
-}
+//         dropDownMenuOptions.innerHTML += dropDownMenuOptionsHtml;
+//     }
+// }
 
-dropDownMenuOptionsMultiplyer()
+// dropDownMenuOptionsMultiplyer()
 // Drop down menu left side items loop stop
 
 
