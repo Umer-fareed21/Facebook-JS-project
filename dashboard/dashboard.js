@@ -135,108 +135,8 @@ createStoryHTML();
 
 
 // posts functionality start
-const posts = [
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=1",
-        profileName: "Ali Khan",
-        date: "2 Feb 2026",
-        caption: "life is beautiful ❤️",
-        postImg: "https://picsum.photos/seed/post1/600/400",
-        reactions: 120,
-        comments: 15,
-        shares: 5,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=2",
-        profileName: "Umer Farooq",
-        date: "5 Feb 2026",
-        caption: "coding mode on 💻",
-        postImg: "https://picsum.photos/seed/post2/600/400",
-        reactions: 340,
-        comments: 22,
-        shares: 10,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=3",
-        profileName: "Ayesha Malik",
-        date: "10 Feb 2026",
-        caption: "chai + code ☕",
-        postImg: "https://picsum.photos/seed/post3/600/400",
-        reactions: 210,
-        comments: 30,
-        shares: 12,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=4",
-        profileName: "Hassan Raza",
-        date: "12 Feb 2026",
-        caption: "simple vibes ✨",
-        postImg: "https://picsum.photos/seed/post4/600/400",
-        reactions: 150,
-        comments: 18,
-        shares: 7,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=5",
-        profileName: "Sara Ahmed",
-        date: "15 Feb 2026",
-        caption: "weekend mood 😎",
-        postImg: "https://picsum.photos/seed/post5/600/400",
-        reactions: 400,
-        comments: 40,
-        shares: 20,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=6",
-        profileName: "Bilal Qureshi",
-        date: "16 Feb 2026",
-        caption: "dream big 🌍",
-        postImg: "https://picsum.photos/seed/post6/600/400",
-        reactions: 290,
-        comments: 25,
-        shares: 15,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=7",
-        profileName: "Zain Abbas",
-        date: "18 Feb 2026",
-        caption: "hard work pays off 💪",
-        postImg: "https://picsum.photos/seed/post7/600/400",
-        reactions: 320,
-        comments: 28,
-        shares: 18,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=8",
-        profileName: "Hina Shah",
-        date: "20 Feb 2026",
-        caption: "learning js step by step 🚀",
-        postImg: "https://picsum.photos/seed/post8/600/400",
-        reactions: 180,
-        comments: 12,
-        shares: 8,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=9",
-        profileName: "Ali Raza",
-        date: "22 Feb 2026",
-        caption: "coffee & chill ☕😎",
-        postImg: "https://picsum.photos/seed/post9/600/400",
-        reactions: 260,
-        comments: 20,
-        shares: 9,
-    },
-    {
-        profileLogo: "https://i.pravatar.cc/150?img=10",
-        profileName: "Fatima Noor",
-        date: "25 Feb 2026",
-        caption: "sunshine vibes 🌞",
-        postImg: "https://picsum.photos/seed/post10/600/400",
-        reactions: 500,
-        comments: 50,
-        shares: 25,
-    }
-];
+
+const posts = JSON.parse(localStorage.getItem("posts")) || [];
 
 let postContainer = document.getElementById("feedPosts");
 
@@ -388,101 +288,50 @@ const createPostHTMLThroughMap = () => {
 }
 
 createPostHTMLThroughMap();
+
+
+
+function createPostHandler(e) {
+    event.preventDefault()
+
+    const createPostInput = document.getElementById("create-post-input").value;
+    const createPostImgInput = document.getElementById("img-input").value;
+    const accountData = JSON.parse(localStorage.getItem("userData")) || {};
+
+    const userFirstName = accountData.firstName
+    const userlastName = accountData.lastName
+
+
+    const newPost = {
+        profileLogo: "https://i.pravatar.cc/150?img=1",
+        profileName: `${userFirstName} ${userlastName}`,
+        date: "29 Jan, 2026 9:06 ",
+        caption: createPostInput,
+        postImg: createPostImgInput,
+        reactions: 0,
+        comments: 0,
+        shares: 0,
+    };
+
+    posts.unshift(newPost)
+
+    localStorage.setItem("posts", JSON.stringify(posts));
+
+    createPostHTMLThroughMap();
+
+
+    createPostContainer.style.display = "none";
+
+
+}
+
+document.getElementById("create-post-submit-button").addEventListener("click", createPostHandler);
+
+
+
+
+
 // posts functionality stop
-
-
-
-
-
-
-
-
-
-
-// Drop down menu left side items loop start
-// const dropDownMenuItems = [
-//     {
-//         logo: `<i data-visualcompletion="css-img"
-//                 style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
-//                 background-position:0 -629px;
-//                 background-size:auto;
-//                 width:36px;
-//                 height:36px;
-//                 background-repeat:no-repeat;
-//                 display:inline-block"></i>`,
-//         tittle: "Events",
-//         info: "Organize or find events and other things to do online and nearby."
-//     },
-//     {
-//         logo: `<i data-visualcompletion="css-img"
-//                 style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
-//                 background-position:0 -777px;
-//                 background-size:auto;
-//                 width:36px;
-//                 height:36px;
-//                 background-repeat:no-repeat;
-//                 display:inline-block"></i>`,
-//         tittle: "Friends",
-//         info: "Search for friends or people you may know."
-//     },
-//     {
-//         logo: `<i data-visualcompletion="css-img"
-//                 style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png?_nc_eui2=AeHE1_1Hq9qUcWIs1b92zb-6f0smtKpsaPR_Sya0qmxo9AjqbN6jN8asWm4R_lY0CkncR2E0VAJkwinngPIVfl2o');
-//                 background-position:0 -185px;
-//                 background-size:auto;
-//                 width:36px;
-//                 height:36px;
-//                 background-repeat:no-repeat;
-//                 display:inline-block"></i>`,
-//         tittle: "Groups",
-//         info: "Connect with people who share your interests."
-//     },
-//     {
-//         logo: `<img src="../assets/news-feeds.png" alt="News Feed" />`,
-//         tittle: "News Feed",
-//         info: "See relevant posts from people and Pages you follow."
-//     },
-//     {
-//         logo: `<img src="../assets/i-logo-1.png" alt="Feeds" />`,
-//         tittle: "Feeds",
-//         info: "See the most recent posts from your friends, groups, Pages and more."
-//     },
-//     {
-//         logo: `<i data-visualcompletion="css-img"
-//                 style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/yq/r/6aum_pQMnLN.webp?_nc_eui2=AeE3KrRUmgft9wK_frK6s2AA8ctQYTbLk1Pxy1BhNsuTU34fMSb_fqCIhFYxkjNvwNLWee9D3Zp5vqzi6rRTanWT');
-//                 background-position:0 -333px;
-//                 background-size:auto;
-//                 width:36px;
-//                 height:36px;
-//                 background-repeat:no-repeat;
-//                 display:inline-block"></i>`,
-//         tittle: "Pages",
-//         info: "Discover and connect with businesses on Facebook."
-//     }
-// ];
-
-// const dropDownMenuOptions = document.getElementById("dropDownMenu");
-
-// function dropDownMenuOptionsMultiplyer() {
-//     for (let i = 0; i < dropDownMenuItems.length; i++) {
-//         let dropDownMenuOptionsHtml = `
-//         <div class="menu-item">
-//             ${dropDownMenuItems[i].logo}
-//             <div>
-//                 <h4>${dropDownMenuItems[i].tittle}</h4>
-//                 <p>${dropDownMenuItems[i].info}</p>
-//             </div>
-//         </div>
-//         `;
-
-//         dropDownMenuOptions.innerHTML += dropDownMenuOptionsHtml;
-//     }
-// }
-
-// dropDownMenuOptionsMultiplyer()
-// Drop down menu left side items loop stop
-
-
 
 
 // Dropdown Functionality start
@@ -565,3 +414,38 @@ createPostBanner.addEventListener("click", function (e) {
     e.stopPropagation();
 });
 
+
+
+
+// function createPostHandler(e) {
+//     event.preventDefault()
+
+//     const createPostInput = document.getElementById("create-post-input").value;
+//     const createPostImgInput = document.getElementById("img-input").value;
+//     const accountData = JSON.parse(localStorage.getItem("userData"));
+
+//     const userFirstName = accountData.firstName
+//     const userlastName = accountData.lastName
+
+//     const newPost = {
+//         profileLogo: "https://i.pravatar.cc/150?img=1",
+//         name: `${userFirstName} ${userlastName}`,
+//         date: "29 Jan, 2026 9:06 ",
+//         caption: createPostInput,
+//         imageUrl: `${createPostImgInput}`,
+//         reactions: 0,
+//         comments: 0,
+//         shares: 0,
+//     };
+
+//     posts.unshift(newPost)
+
+//     localStorage.setItem("posts", JSON.stringify(posts));
+
+//     createPostHTMLThroughMap();
+
+
+//     createPostContainer.style.display = "none";
+
+//     // console.log(newPost)
+// }

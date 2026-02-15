@@ -888,6 +888,7 @@
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    height: 400px;
 }
 
 .feed-posts .feed-img img {
@@ -1184,6 +1185,7 @@
     gap: 5px;
 }
 
+
 .create-post-m-s-2 > .create-post-logos > .logo:hover {
     background-color: #d6d6d66f;
 }
@@ -1203,6 +1205,16 @@
     border-radius: 10px;
     cursor: pointer;
     color: #ffffff;
+}
+
+#img-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#img-input:focus {
+    outline: none;
 }
 
 /*********************************************  Create post dialoge end  ********************************************/
