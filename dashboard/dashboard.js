@@ -289,7 +289,7 @@ const createPostHTMLThroughMap = () => {
 
 createPostHTMLThroughMap();
 
-
+const postForm = document.getElementById("post-form");
 
 function createPostHandler(e) {
     event.preventDefault()
@@ -319,9 +319,9 @@ function createPostHandler(e) {
 
     createPostHTMLThroughMap();
 
-
+    
+    postForm.reset();
     createPostContainer.style.display = "none";
-
 
 }
 
@@ -391,7 +391,6 @@ const createPostContainer = document.getElementById("create-post-container");
 const createPostBanner = document.querySelector(".create-post-banner");
 const createPostCloseBtn = document.getElementById("close-button");
 const createPostButton = document.getElementById("create-post-button");
-const postForm = document.getElementById("post-form");
 
 createPostContainer.style.display = "none";
 
