@@ -485,7 +485,7 @@ createPostHTMLThroughMap();
 
 
 
-// Dropdown Functinallity start
+// Dropdown Functionality start
 const dropDownMenuIconsDiv = document.getElementById("drop-down-menu-div");
 const dropDownMenuIconsDivSvg = document.getElementById("drop-down-menu-div-icon");
 const dropDownMenu = document.getElementById("dropdown-menu");
@@ -533,4 +533,35 @@ function messangerDropDown() {
         dropDownMessangerIconsDivSvg.style.fill = "";
     }
 };
-// Dropdown Functinallity stop
+// Dropdown Functionality stop
+
+
+
+
+const createPostContainer = document.getElementById("create-post-container");
+const createPostBanner = document.querySelector(".create-post-banner");
+const createPostCloseBtn = document.getElementById("close-button");
+const createPostButton = document.getElementById("create-post-button");
+const postForm = document.getElementById("post-form");
+
+createPostContainer.style.display = "none";
+
+createPostButton.addEventListener("click", function () {
+    createPostContainer.style.display = "flex";
+});
+
+createPostCloseBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    createPostContainer.style.display = "none";
+});
+
+createPostContainer.addEventListener("click", function (e) {
+    if (e.target === createPostContainer) {
+        createPostContainer.style.display = "none";
+    }
+});
+
+createPostBanner.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+

@@ -1036,6 +1036,13 @@
     }
 }
 
+
+
+
+
+/*********************************************  Create post dialoge start  ********************************************/
+
+
 .create-post-container {
     position: fixed;
     width: 100%;
@@ -1136,3 +1143,66 @@
 .create-post-main>form>#create-post-input:focus {
     outline: none;
 }
+
+.create-post-media-section > .create-post-m-s-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-post-media-section > .create-post-m-s-1 > .select-color > img {
+    width: 38px;
+    cursor: pointer;
+}
+
+.create-post-media-section > .create-post-m-s-1 > .select-emoji > i {
+    cursor: pointer;
+}
+
+.create-post-m-s-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid rgba(186, 186, 186, 0.622);
+    border-radius: 10px;
+}
+
+.create-post-m-s-2 > .create-post-logos {
+    display: flex;
+    align-items: center;
+}
+
+.create-post-m-s-2 > .create-post-logos > .logo {
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.create-post-m-s-2 > .create-post-logos > .logo:hover {
+    background-color: #d6d6d66f;
+}
+
+.create-post-m-s-2 > .text > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #080809;
+}
+
+.create-post-button > button {
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    background-color: #0866ff;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/*********************************************  Create post dialoge end  ********************************************/

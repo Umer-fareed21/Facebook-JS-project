@@ -764,7 +764,7 @@
                     </div>
 
                     <!-- <input type="text" placeholder="What's on your mind, Umer?"> -->
-                    <button>What's on your mind, Umer?</button>
+                    <button id="create-post-button">What's on your mind, Umer?</button>
 
                     <div class="logo-imgs">
                         <img src="../assets/red-cam.png" alt="">
@@ -1014,7 +1014,7 @@
 
 
 
-    <!-- <div class="create-post-container"> 
+    <div id="create-post-container" class="create-post-container"> 
         <div class="create-post-banner">
             <div class="create-post-header">
                 <h1>Create post</h1>
@@ -1031,7 +1031,7 @@
             </div>
 
             <div class="create-post-main">
-                <form>
+                <form id="post-form">
                     <div class="create-post-profile-sec">
                         <div class="dp">
                             <img src="../assets/prof-pic.jpg" alt="">
@@ -1070,8 +1070,9 @@
                             </div>
 
                             <div class="create-post-logos">
-                                <div class="logo">
+                                <div class="logo" id="image-upload-btn">
                                     <img src="../assets/green-img.png" alt="">
+                                    <input type="file" id="post-image-input" accept="image/*" hidden>
                                 </div>
                                 <div class="logo">
                                     <img src="../assets/tag-people.png" alt="">
@@ -1094,12 +1095,12 @@
                     </div>
 
                     <div class="create-post-button">
-                        <button id="submit-button">Post</button>
+                        <button id="create-post-submit-button">Post</button>
                     </div>
                 </form>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
 
