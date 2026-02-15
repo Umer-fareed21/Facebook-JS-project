@@ -462,7 +462,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: sticky;
-    top: 60px;
+    top: 60px; 
     height: calc(100vh - 60px);
     overflow-y: auto;
 }
