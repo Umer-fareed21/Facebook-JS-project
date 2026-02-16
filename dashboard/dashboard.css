@@ -462,7 +462,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: sticky;
-    top: 60px; 
+    top: 60px;
     height: calc(100vh - 60px);
     overflow-y: auto;
 }
@@ -800,6 +800,7 @@
 .feed-posts {
     font-family: "Arial";
     width: 100%;
+    min-width: 600px;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     padding: 15px 20px;
     border-radius: 10px;
@@ -944,103 +945,6 @@
 
 /*********************************************  feed & posts end ***********************************************/
 
-/*********************************************  Media Queuries  ***********************************************/
-
-@media (max-width: 768px) {
-
-    .header-left .search-input>input,
-    .header-right>button,
-    .main .left-sidebar,
-    .right-slider {
-        display: none;
-    }
-
-    .main {
-        justify-content: center;
-    }
-
-    .center-bar {
-        width: 80%;
-    }
-
-    .dashboard-header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .header-center {
-        gap: 20px;
-    }
-
-    .header-right {
-        max-width: 200px;
-        width: 100%;
-    }
-
-    .header-left .search-input {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-    }
-}
-
-@media (max-width: 425px) {
-    .header-center {
-        display: none;
-    }
-
-    .center-bar {
-        width: 100%;
-        padding: 20px 0px;
-    }
-
-    .logo-imgs {
-        gap: 5px;
-    }
-
-    .profile-nav>button {
-        font-size: 14px;
-    }
-
-    .feed-posts {
-        border-radius: 0px;
-        box-shadow: none;
-        padding: 20px 0px;
-        margin-top: 0px;
-    }
-
-    #feed-posts {
-        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    .profile-nav {
-        border-radius: 0px;
-    }
-
-    .story-container {
-        margin-left: 10px;
-    }
-
-    .dropdown-menu {
-        margin-right: 50px;
-    }
-
-    .dropdown-menu-contant {
-        flex-direction: column;
-    }
-}
-
-
-
-
-
 /*********************************************  Create post dialoge start  ********************************************/
 
 
@@ -1145,18 +1049,18 @@
     outline: none;
 }
 
-.create-post-media-section > .create-post-m-s-1 {
+.create-post-media-section>.create-post-m-s-1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.create-post-media-section > .create-post-m-s-1 > .select-color > img {
+.create-post-media-section>.create-post-m-s-1>.select-color>img {
     width: 38px;
     cursor: pointer;
 }
 
-.create-post-media-section > .create-post-m-s-1 > .select-emoji > i {
+.create-post-media-section>.create-post-m-s-1>.select-emoji>i {
     cursor: pointer;
 }
 
@@ -1170,12 +1074,12 @@
     border-radius: 10px;
 }
 
-.create-post-m-s-2 > .create-post-logos {
+.create-post-m-s-2>.create-post-logos {
     display: flex;
     align-items: center;
 }
 
-.create-post-m-s-2 > .create-post-logos > .logo {
+.create-post-m-s-2>.create-post-logos>.logo {
     padding: 6px;
     border-radius: 50%;
     display: flex;
@@ -1186,17 +1090,17 @@
 }
 
 
-.create-post-m-s-2 > .create-post-logos > .logo:hover {
+.create-post-m-s-2>.create-post-logos>.logo:hover {
     background-color: #d6d6d66f;
 }
 
-.create-post-m-s-2 > .text > a {
+.create-post-m-s-2>.text>a {
     text-decoration: none;
     font-weight: 600;
     color: #080809;
 }
 
-.create-post-button > button {
+.create-post-button>button {
     width: 100%;
     padding: 10px;
     font-weight: 600;
@@ -1218,3 +1122,97 @@
 }
 
 /*********************************************  Create post dialoge end  ********************************************/
+
+
+/*********************************************  Media Queuries  ***********************************************/
+
+@media (max-width: 768px) {
+
+    .header-left .search-input>input,
+    .header-right>button,
+    .main .left-sidebar,
+    .right-slider {
+        display: none;
+    }
+
+    .main {
+        justify-content: center;
+    }
+
+    .center-bar {
+        width: 80%;
+    }
+
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-center {
+        gap: 20px;
+    }
+
+    .header-right {
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .header-left .search-input {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-center {
+        display: none;
+    }
+
+    .center-bar {
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .logo-imgs {
+        gap: 5px;
+    }
+
+    .profile-nav>button {
+        font-size: 14px;
+    }
+
+    .feed-posts {
+        border-radius: 0px;
+        box-shadow: none;
+        padding: 20px 0px;
+        margin-top: 0px;
+    }
+
+    #feed-posts {
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .profile-nav {
+        border-radius: 0px;
+    }
+
+    .story-container {
+        margin-left: 10px;
+    }
+
+    .dropdown-menu {
+        margin-right: 50px;
+    }
+
+    .dropdown-menu-contant {
+        flex-direction: column;
+    }
+}
